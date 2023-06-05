@@ -16,7 +16,7 @@ function Creators() {
             <div className={styles.detail}>Show and share what you love. Get paid every time,and build relationships with your favorite stores</div>
           </div>
           <div className={styles.imageWrap}>
-            <img className={styles.image} src={TiktokColeection} alt="Image" />
+            <img className={styles.image} src={TiktokColeection} alt="tiktok" />
           </div>
         </div>
       </div>
