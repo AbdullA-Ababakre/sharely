@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './component/header/index.jsx';
+import Creators from './pages/Creators/index.jsx';
+import Stores from './pages/Stores/index.jsx';
+import Styles from './app.module.scss';
 
 function App() {
+  const [userType, setUserType] = useState('creators');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className={Styles.header}>
+        <div>For Creators</div>
+        <div>For Stores</div>
+      </div>
+      {
+        userType === 'creators' && <Creators></Creators>
+      }
+      {
+        userType === 'stores' && <Stores></Stores>
+      }
     </div>
   );
 }
