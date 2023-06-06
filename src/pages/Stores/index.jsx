@@ -9,8 +9,8 @@ function Stores() {
         <div className={styles.title}>Sharely</div>
         <div className={styles.content}>
           <div className={styles.text}>
-            <div className={styles.sum}>Put UGC and partnerships on sharely for your store</div>
-            <div className={styles.detail}>Save time . Save money. Automate your content with pay-for-performance creator marketing.</div>
+            <div className={styles.sum}>Promote customer sharing and engagement for your store</div>
+            <div className={styles.detail}>Turn the every customers into online ambassadors.Make your store go viral with pay-for-performance creator marketing</div>
           </div>
           <div className={styles.imageWrap}>
             <img className={styles.image} src={TiktokColeection} alt="tiktok" />
