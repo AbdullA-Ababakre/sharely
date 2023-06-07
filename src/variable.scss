@@ -1,0 +1,44 @@
+$color-primary-blue: rgb(72, 74, 235);
+
+$breakpoints: (
+  "small": 480px,
+  "medium": 768px,
+  "large": 1024px,
+  "xlarge": 1200px,
+);
+
+@mixin media($name) {
+  $query: map-get($breakpoints, $name);
+
+  @if $query != null {
+    @media (min-width: $query) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$name}. Please choose from: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-small {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-medium2 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin media-large {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
