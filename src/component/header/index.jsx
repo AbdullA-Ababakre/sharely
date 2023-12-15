@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className={Styles.header}>
          <div>For Creators</div>
-         <div>For Stores</div>
+         <div>For Products</div>
     </div>
   );
 }

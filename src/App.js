@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Creators from "./pages/Creators/index.jsx";
-import Stores from "./pages/Stores/index.jsx";
+import Products from "./pages/Products/index.jsx";
 import Styles from "./app.module.scss";
 
 function App() {
@@ -25,17 +25,17 @@ function App() {
         </div>
         <div
           className={
-            userType === "stores"
+            userType === "products"
               ? `${Styles.activeBox} ${Styles.box}`
               : Styles.box
           }
-          onClick={() => handleClick("stores")}
+          onClick={() => handleClick("products")}
         >
-          For Stores
+          For Brands
         </div>
       </div>
       {userType === "creators" && <Creators></Creators>}
-      {userType === "stores" && <Stores></Stores>}
+      {userType === "products" && <Products></Products>}
     </div>
   );
 }

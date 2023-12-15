@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./index.module.scss";
 import TiktokColeection from "../../assets/tiktok.png";
-import creatorsGuide from "../../assets/creator-guide.png";
+// import creatorsGuide from "../../assets/creator-guide.png";
 import Footer from "../../component/footer/index";
 import Gallery from "../../component/Gallery/index";
+import Button from "../../component/Button/index";
 
 function Creators() {
+  const toCreatorsForm = () => {
+    window.open("https://forms.gle/srnze6uN7DuC7rUA7", "_blank");
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -13,12 +18,16 @@ function Creators() {
         <div className={styles.content}>
           <div className={styles.text}>
             <div className={styles.sum}>
-              Partner with your favorite stores, instantly
+              Get paid by creating content about your favorite product
             </div>
             <div className={styles.detail}>
-              Show and share what you love. Get paid every time,and build
-              relationships with your favorite stores
+              <ol type="I">
+                <li>Create content featuring your favorite product</li>
+                <li>Post the content following our guidelines</li>
+                <li>Get paid for views within the first 48 hrs</li>
+              </ol>
             </div>
+            <Button onClick={toCreatorsForm}></Button>
           </div>
           <div className={styles.imageWrap}>
             <img className={styles.image} src={TiktokColeection} alt="tiktok" />
@@ -26,13 +35,13 @@ function Creators() {
         </div>
       </div>
       <Gallery />
-      <div className={styles.creatorsGuide}>
+      {/* <div className={styles.creatorsGuide}>
         <img
           className={styles.creatorsGuideImage}
           src={creatorsGuide}
           alt="creator-guide"
         />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
