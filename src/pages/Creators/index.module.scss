@@ -1,4 +1,12 @@
 @import "../../variable.scss";
+
+@mixin media-mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+
 .page {
   .container {
     background-color: $color-primary-blue;
@@ -6,8 +14,13 @@
     .title {
       padding-top: 10px;
       padding-left: 40px;
-      font-size: 40px;
+      font-size: 2.5em; // changed to em for scalability
       color: white;
+
+      @include media-mobile {
+        padding-left: 20px;
+        font-size: 1.5em;
+      }
     }
 
     .content {
@@ -38,16 +51,24 @@
 
         @include media-mobile {
           width: auto;
-          padding: 50px;
+          padding: 30px;
+
+          .sum{
+            font-size: 2em;
+          }
+          .detail {
+            font-size: 1em;
+          }
         }
       }
 
       .imageWrap {
-        height: 300px;
+        height: 400px;
 
         .image {
           height: 100%;
         }
+
         @include media-mobile {
           padding-bottom: 50px;
         }
@@ -71,5 +92,104 @@
       width: 80%;
       height: 100%;
     }
+
+    @include media-mobile {
+      height: auto;
+
+      .creatorsGuideImage {
+        width: 100%;
+      }
+    }
   }
 }
+
+// @import "../../variable.scss";
+
+// // // Define a mixin for mobile media queries
+// @mixin media-mobile {
+//   @media (max-width: 768px) {
+//     @content;
+//   }
+// }
+
+// .page {
+//   .container {
+//     background-color: $color-primary-blue;
+
+//     .title {
+//       padding-top: 10px;
+//       padding-left: 40px;
+//       font-size: 2.5em; // changed to em for scalability
+//       color: white;
+
+//       @include media-mobile {
+//         padding-left: 20px;
+//         font-size: 1.5em;
+//       }
+//     }
+
+//     .content {
+//       display: flex;
+//       align-items: center;
+
+//       .text {
+//         width: 50%;
+//         padding: 100px;
+
+//         .sum {
+//           font-size: 2.375em;
+//           color: #fbfcfc;
+//           line-height: 1.2;
+//           margin-bottom: 20px;
+//           // other styles remain unchanged
+//         }
+
+//         .detail {
+//           font-size: 1.5em;
+//           color: rgb(251, 252, 252);
+//           line-height: 1.5;
+//           // other styles remain unchanged
+//         }
+
+//         @include media-mobile {
+//           width: auto;
+//           padding: 50px;
+
+//           .sum,
+//           .detail {
+//             font-size: 1em;
+//           }
+//         }
+//       }
+
+//       .imageWrap {
+//         height: 300px;
+
+//         .image {
+//           width: 100%;
+//           height: auto;
+//         }
+
+//         @include media-mobile {
+//           padding-bottom: 50px;
+//         }
+//       }
+
+//       @include media-mobile {
+//         flex-direction: column;
+//       }
+//     }
+//   }
+
+//   .creatorsGuide {
+
+//     // other styles remain unchanged
+//     @include media-mobile {
+//       height: auto;
+
+//       .creatorsGuideImage {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

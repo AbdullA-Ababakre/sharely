@@ -1,4 +1,5 @@
 @import "../../variable.scss";
+
 .page {
   .container {
     box-sizing: border-box;
@@ -20,6 +21,7 @@
       .text {
         width: 50%;
         padding: 100px;
+
         @include media-mobile {
           width: auto;
         }
@@ -41,6 +43,20 @@
             "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
           line-height: 36px;
         }
+
+        @include media-mobile {
+          width: auto;
+          padding: 30px;
+
+          .sum {
+            font-size: 2em;
+          }
+
+          .detail {
+            font-size: 1em;
+          }
+        }
+
       }
 
       .imageWrap {
