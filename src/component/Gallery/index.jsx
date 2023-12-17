@@ -17,7 +17,7 @@ function Gallery() {
 
   return (
     <div className={styles.gallery}>
-      <div className={styles.title}>Share and Earn </div>
+      <div className={styles.title}>Share and Earn</div>
       <div className={styles.list}>
         <div
           className={styles.storeInfo}
