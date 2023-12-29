@@ -1,13 +1,12 @@
-import React from 'react';
-import './index.css'; // Make sure to create a corresponding CSS file
+import React from "react";
+import "./index.css"; // Make sure to create a corresponding CSS file
 
-const DemoButton = ({ onClick }) => {
-
+const ButtonPrimary = ({ onClick, style = {}, text = "" }) => {
   return (
-    <button className="demoButton" onClick={onClick}>
-      Get started
+    <button className="demoButton" onClick={onClick} style={{ ...style }}>
+      {text}
     </button>
   );
 };
 
-export default DemoButton;
+export default ButtonPrimary;

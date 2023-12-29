@@ -1,26 +1,26 @@
 .header {
-    width: 100vw;
+  width: 100vw;
+  display: flex;
+  color: black;
+  background-color: rgb(218, 219, 250);
+  padding-left: 40px;
+
+  // .creatorLink{
+  //     margin-right: 20px;
+  // }
+
+  .box {
     display: flex;
-    color: black;
-    background-color: rgb(218, 219, 250);
-    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
 
-    // .creatorLink{
-    //     margin-right: 20px;
-    // }
-
-    .box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 20px
-    }
-
-    .activeBox {
-        width: 120px;
-        height: 44px;
-        background-color: rgb(72, 74, 235);
-        transform: skewX(-20deg);
-        color: white;
-    }
+  .activeBox {
+    width: 120px;
+    height: 44px;
+    background-color: rgb(72, 74, 235);
+    transform: skewX(-20deg);
+    color: white;
+  }
 }

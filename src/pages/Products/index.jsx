@@ -4,10 +4,9 @@ import TiktokColeection from "../../../src/assets/tiktok.png";
 import Button from "../../component/Button/index";
 
 function Stores() {
-
-  const toBrandsForm = ()=>{
-    window.open('https://forms.gle/NvpwA6ZZnVE6WZ316', '_blank')
-  }
+  const toBrandsForm = () => {
+    window.open("https://forms.gle/NvpwA6ZZnVE6WZ316", "_blank");
+  };
 
   return (
     <div className={styles.page}>
@@ -25,7 +24,9 @@ function Stores() {
                 <li>Get organic customer growth</li>
               </ol>
             </div>
-            <Button onClick={toBrandsForm}></Button>
+            <div className={styles.startBtn}>
+              <Button onClick={toBrandsForm} text="Get Started"></Button>
+            </div>
           </div>
           <div className={styles.imageWrap}>
             <img className={styles.image} src={TiktokColeection} alt="tiktok" />

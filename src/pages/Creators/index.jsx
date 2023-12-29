@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./index.module.scss";
 import TiktokColeection from "../../assets/tiktok.png";
-// import creatorsGuide from "../../assets/creator-guide.png";
 import Footer from "../../component/footer/index";
 import Gallery from "../../component/Gallery/index";
 import Button from "../../component/Button/index";
@@ -27,7 +26,9 @@ function Creators() {
                 <li>Get paid for views within the first 48 hrs</li>
               </ol>
             </div>
-            <Button onClick={toCreatorsForm}></Button>
+            <div className={styles.startBtn}>
+              <Button onClick={toCreatorsForm} text="Get Started"></Button>
+            </div>
           </div>
           <div className={styles.imageWrap}>
             <img className={styles.image} src={TiktokColeection} alt="tiktok" />
@@ -35,13 +36,6 @@ function Creators() {
         </div>
       </div>
       <Gallery />
-      {/* <div className={styles.creatorsGuide}>
-        <img
-          className={styles.creatorsGuideImage}
-          src={creatorsGuide}
-          alt="creator-guide"
-        />
-      </div> */}
       <Footer />
     </div>
   );
