@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./index.module.scss";
 import ButtonPrimary from "../../component/Button";
 import { isArray } from "lodash";
 import { useSelector } from "react-redux";
 import { selectCurrentBrand } from "../../slice/brandSlice";
+import { useNavigate } from "react-router-dom";
 
 function Details() {
   const currentBrand = useSelector(selectCurrentBrand);
-  const brandNote = currentBrand.notes;
-  const brandRules = currentBrand.rules;
+  const navigate = useNavigate();
+
+  if (currentBrand.id === 0) {
+    navigate("/");
+  }
+
+  const brandNote = currentBrand?.notes;
+  const brandRules = currentBrand?.rules;
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <h2 className={styles.pageTitle}>
+        <h2 className={styles?.pageTitle}>
           {currentBrand.title} Content Details
         </h2>
         <div className={styles.brandNote}>
@@ -36,7 +43,10 @@ function Details() {
         </div>
         <div className="">
           <ButtonPrimary
-            onClick={() => {}}
+            onClick={() => {
+              window.location.href = "https://forms.gle/srnze6uN7DuC7rUA7";
+              return null;
+            }}
             style={{ backgroundColor: "#4B4BFF", color: "white" }}
             text="Accept"
           />

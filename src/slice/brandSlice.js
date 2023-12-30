@@ -12,6 +12,15 @@ const sampleNotes =
   "Share your experience/results with the product. Talking to the camera or including a voiceover often performs better. Include a short, engaging hook at the beginning of your video to get more views. Be sure to film in a well-lit area and make sure people can clearly hear you. Be authentic and avoid using filters. Try to keep the product in frame for a majority of the video.";
 
 const brands = {
+  0: {
+    id: 0,
+    title: "",
+    productLink: "",
+    desc: "",
+    rules: [],
+    notes: "",
+    imageSrc: lightspaceImg,
+  },
   1: {
     id: 1,
     title: "Lightspace",
@@ -78,7 +87,6 @@ export const selectCurrentBrand = (state) =>
 export const selectBrands = (state) => _select(state).brands;
 
 export const selectActiveBrands = (state) => {
-  console.log(_select(state).activeBrands, "sooooo");
   const activeBrands = _select(state).activeBrands;
   const brands = selectBrands(state);
   return activeBrands?.map((id) => brands[id]);
