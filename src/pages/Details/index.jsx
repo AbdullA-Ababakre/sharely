@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./index.module.scss";
 import ButtonPrimary from "../../component/Button";
 import { isArray } from "lodash";
