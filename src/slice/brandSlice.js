@@ -57,8 +57,25 @@ const brands = {
     notes: sampleNotes,
     imageSrc: Sourcely,
   },
+  5: {
+    id: 5,
+    title: "Dreamore AI",
+    productLink: "https://apps.apple.com/au/app/dreamore-ai/id6447442484",
+    desc: "With Dreamore, you can record your dreams and receive personalized interpretations based on your unique experiences. The app uses advanced analysis algorithms to help you understand the hidden meanings behind your dreams, giving you insight into your subconscious mind. sFollow us on TickTok @dreamore.app",
+    rules: [
+      "Focus on the product",
+      "Great lighting + clear audio",
+      "Clearly show Product's logo && website link",
+      "Must tag #Dreammore",
+      "$2 cash for 1 download, or $5 per 1000 views, capped at $50 per video.",
+      "Sample video: https://www.tiktok.com/@dreamore.app/video/7310753392719072555?_r=1&_t=8iKEY66ZQqM",
+      "Sample video: https://www.tiktok.com/@cocochen24/photo/7311957365652262186?is_from_webapp=1&web_id=7303775259357300255",
+    ],
+    notes: sampleNotes,
+    imageSrc: Sourcely,
+  },
 };
-const activeBrands = [1, 2, 3, 4];
+const activeBrands = [1, 2, 3, 4, 5];
 export const brandSliceKey = "brand";
 export const brandSlice = createSlice({
   name: brandSliceKey,
