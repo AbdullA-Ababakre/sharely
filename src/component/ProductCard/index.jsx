@@ -10,7 +10,7 @@ function ProductCard({
   return (
     <div className="wrapper" onClick={onCardLick}>
       <div className="container">
-        <img alt="item" className="top" src={imageUrl} />
+        <img alt="item" className="top" src={imageUrl}  />
         <div className="bottom">
           <p className="product-title">{title}</p>
         </div>

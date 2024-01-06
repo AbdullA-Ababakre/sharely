@@ -16,25 +16,52 @@ function Details() {
 
   const brandNote = currentBrand?.notes;
   const brandRules = currentBrand?.rules;
+  const bounty = currentBrand?.bounty;
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <h2 className={styles?.pageTitle}>
           {currentBrand.title} Content Details
         </h2>
-        <div className={styles.brandNote}>
+
+        <div className="">
+          <h3 className={styles.rulesTitle}>Product Link</h3>
+          <a href={currentBrand.productLink} target="_blank" rel="noreferrer">
+            You can explore the product here
+          </a>
+        </div>
+
+        <div className="">
           <h3 className={styles.rulesTitle}>
             A few notes from {currentBrand.title}
           </h3>
-          <div className={styles.brandNoteBox}>
-            <p>{brandNote}</p>
+          <div className={styles.rules}>
+            {isArray(brandNote) &&
+              brandNote?.map((item, index) => (
+                <div key={"itemDesc" + index} className={styles.box}>
+                  <p> {item}</p>
+                </div>
+              ))}
           </div>
         </div>
+
         <div className="">
           <h3 className={styles.rulesTitle}>Rules</h3>
           <div className={styles.rules}>
             {isArray(brandRules) &&
               brandRules?.map((item, index) => (
+                <div key={"itemDesc" + index} className={styles.box}>
+                  <p> {item}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+        <div className="">
+          <h3 className={styles.rulesTitle}>Bounty</h3>
+          <div className={styles.rules}>
+            {isArray(bounty) &&
+              bounty?.map((item, index) => (
                 <div key={"itemDesc" + index} className={styles.box}>
                   <p> {item}</p>
                 </div>

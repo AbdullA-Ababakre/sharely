@@ -1,6 +1,9 @@
 @import "../../variable.scss";
+
+
 .page {
   width: 100%;
+
   .container {
     margin: 0 auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -29,9 +32,11 @@
       }
     }
   }
+
   .rulesTitle {
     margin: 1rem;
   }
+
   .rules {
     display: flex;
     flex-direction: column;
@@ -45,4 +50,21 @@
   width: 100%;
   height: auto;
   padding: 1rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .page {
+    width: 100%;
+
+    .container {
+      width: 100vw;
+    }
+  }
+
+  .box {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+  }
 }
