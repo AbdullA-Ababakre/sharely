@@ -16,7 +16,7 @@ const brands = {
     ],
     notes: ["Focus on the product", "Creator must be US based"],
     imageSrc: lightspaceImg,
-    bounty: ["$10 for 1000 views "],
+    bounty: ["$20 for 1000 views "],
   },
   1: {
     id: 1,
@@ -58,8 +58,8 @@ const brands = {
     productLink: "https://apps.apple.com/au/app/dreamore-ai/id6447442484",
     desc: "With Dreamore, you can record your dreams and receive personalized interpretations based on your unique experiences. The app uses advanced analysis algorithms to help you understand the hidden meanings behind your dreams, giving you insight into your subconscious mind. sFollow us on TickTok @dreamore.app",
     rules: [
-      "Must tag #Dreammore to the caption",
-      "get paid based on the engagement of the content after 48 hours",
+      "Must tag #Dreammore to the caption and @ dreamore.app tiktok account",
+      "get paid based on the engagement of the content after 24 hours",
     ],
     notes: [
       "Focus on the product",
@@ -71,12 +71,35 @@ const brands = {
     imageSrc: DreamMore,
     bounty: [
       "$2 cash for 1 download",
-      "$5 per 1000 views, capped at $50 per video.",
+      "$20 per 1000 views, capped at $2000 per 1M views.",
+    ],
+  },
+  4: {
+    id: 3,
+    title: "InfoTap",
+    productLink: "https://www.tiktok.com/@infotap_official",
+    desc: "The most fastest and easiest way to connect and make friends",
+    rules: [
+      "1. Email abdullaszu@gmail.com to purchase the product at a discount. Include your contact details and product preferences.",
+      "2.After the product is shipped and delivered to your address, create and share videos showcasing its features and use.",
+      "Before you post : Must tag #infotap to the caption and @ infotap tiktok account",
+      "After you post: get paid based on the engagement of the content after 24 hours",
+    ],
+    notes: [
+      "Focus on the product",
+      "Great lighting + clear audio",
+      "Clearly show Product's logo && website link",
+      "Sample video: https://www.tiktok.com/@infotap_official/video/7321139821202754862",
+      "Sample video: https://www.tiktok.com/@infotap_official/video/7323081037393726762",
+    ],
+    imageSrc: "https://s11.ax1x.com/2024/01/19/pFAR3lj.jpg",
+    bounty: [
+      "$20 per 1000 views, capped at $2000 per 1M views.",
     ],
   },
 };
 
-const activeBrands = [0, 1, 2, 3];
+const activeBrands = [0, 1, 2, 3,4];
 export const brandSliceKey = "brand";
 export const brandSlice = createSlice({
   name: brandSliceKey,
