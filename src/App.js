@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Creators from "./pages/Creators/index.jsx";
 import Products from "./pages/Products/index.jsx";
 import Styles from "./app.module.scss";
+import { Slider } from "./component/Slider/index.jsx";
 function App() {
   const [userType, setUserType] = useState("creators");
 

@@ -1,0 +1,77 @@
+@mixin flex-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+$primary-color: #484af4;
+
+.slider-container {
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+  @include flex-container();
+  gap: 10px;
+  .bonus-list {
+    @include flex-container();
+    justify-content: flex-start;
+  }
+
+  .slider-dollar {
+    font-size: 1.8rem;
+    color: lighten($color: $primary-color, $amount: 3%);
+  }
+}
+
+.bonus-item {
+  label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.checkbox-wrapper {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  margin-right: 8px;
+
+  input[type="checkbox"] {
+    margin-right: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: rgb(255, 255, 255); // Use actual color from your image
+    border: 1px solid darken($primary-color, 5%); // Darken your color slightly
+    border-radius: 3px;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    &:checked {
+      background: $primary-color; // Even darker for the checked state
+    }
+    &:checked:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 3px lighten($primary-color, 30%); // Lighten for a focus glow
+    }
+  }
+}
+
+.div-line {
+  border: none;
+  border-top: 1px solid #ccc; /* Adjust color as needed */
+  margin: 10px 0; /* Adjust margin as needed */
+}

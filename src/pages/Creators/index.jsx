@@ -4,6 +4,7 @@ import TiktokColeection from "../../assets/tiktok.png";
 import Footer from "../../component/footer/index";
 import Gallery from "../../component/Gallery/index";
 import Button from "../../component/Button/index";
+import { Slider } from "../../component/Slider";
 
 function Creators() {
   const toCreatorsForm = () => {
@@ -36,6 +37,12 @@ function Creators() {
         </div>
       </div>
       <Gallery />
+      <div
+        className=""
+        style={{ width: "350px", height: "610px", margin: "0 auto" }}
+      >
+        <Slider />
+      </div>
       <Footer />
     </div>
   );
