@@ -13,11 +13,11 @@ export function Slider() {
       <h3>
         Earn up to <span className="slider-dollar">${sliderValue}</span> for
       </h3>
-      <h4> {sliderValue * 30} views </h4>
+      <h4> {sliderValue * 500} views </h4>
       <input
         type="range"
         min="0"
-        max="10000000"
+        max="2000"
         value={sliderValue}
         onChange={handleSliderChange}
       />
@@ -27,14 +27,14 @@ export function Slider() {
 }
 
 const bonusesData = [
-  { id: 1, name: "Demonstration", bonus: 100, percent: 10 },
-  { id: 2, name: "Has a hook", bonus: 100, percent: 10 },
-  { id: 3, name: "Unique/Creative", bonus: 100, percent: 10 },
-  { id: 4, name: "Good camera presence", bonus: 50, percent: 5 },
-  { id: 5, name: "Product & logo shown", bonus: 50, percent: 5 },
-  { id: 6, name: "Product first 5 seconds", bonus: 50, percent: 5 },
-  { id: 7, name: "Clear audio", bonus: 50, percent: 5 },
-  { id: 8, name: "Good lighting", bonus: 50, percent: 5 },
+  { id: 1, name: "Demonstration", bonus: 100, percent: 10 , checked:true},
+  { id: 2, name: "Has a hook", bonus: 100, percent: 10 , checked:true},
+  { id: 3, name: "Unique/Creative", bonus: 100, percent: 10 , checked:true},
+  { id: 4, name: "Good camera presence", bonus: 50, percent: 5 , checked:true},
+  { id: 5, name: "Product & logo shown", bonus: 50, percent: 5 , checked:true},
+  { id: 6, name: "Product first 5 seconds", bonus: 50, percent: 5 , checked:true},
+  { id: 7, name: "Clear audio", bonus: 50, percent: 5 , checked:true},
+  { id: 8, name: "Good lighting", bonus: 50, percent: 5 , checked:true},
 ];
 
 const BonusItem = ({ name, bonus, onToggle, isChecked }) => (
@@ -55,11 +55,7 @@ function BonusList() {
 
   const handleToggle = (id) => {
     setSelectedBonuses((current) => {
-      if (current.includes(id)) {
-        return current.filter((bonusId) => bonusId !== id);
-      } else {
-        return [...current, id];
-      }
+      return current.map(item=>{if(item.id===id){return {...item, checked : !item.checked}}else{return item}})
     });
   };
 
@@ -77,7 +73,7 @@ function BonusList() {
           key={bonus.id}
           name={bonus.name}
           bonus={bonus.bonus}
-          isChecked={selectedBonuses.includes(bonus.id)}
+          isChecked={bonus.checked}
           onToggle={() => handleToggle(bonus.id)}
         />
       ))}

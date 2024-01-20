@@ -5,6 +5,7 @@ import { isArray } from "lodash";
 import { useSelector } from "react-redux";
 import { selectCurrentBrand } from "../../slice/brandSlice";
 import { useNavigate } from "react-router-dom";
+import { Slider } from "../../component/Slider";
 
 function Details() {
   const currentBrand = useSelector(selectCurrentBrand);
@@ -24,7 +25,7 @@ function Details() {
         <h2 className={styles?.pageTitle}>
           {currentBrand.title} Content Details
         </h2>
-
+       
         <div className="">
           <h3 className={styles.rulesTitle}>Product Link</h3>
           <a href={currentBrand.productLink} target="_blank" rel="noreferrer">
@@ -68,6 +69,12 @@ function Details() {
               ))}
           </div>
         </div>
+        <div
+        className=""
+        style={{ width: "350px", height: "610px", margin: "0 auto" }}
+      >
+        <Slider />
+      </div>   
         <div className="">
           <ButtonPrimary
             onClick={() => {

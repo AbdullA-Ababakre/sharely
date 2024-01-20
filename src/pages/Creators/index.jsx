@@ -37,12 +37,7 @@ function Creators() {
         </div>
       </div>
       <Gallery />
-      <div
-        className=""
-        style={{ width: "350px", height: "610px", margin: "0 auto" }}
-      >
-        <Slider />
-      </div>
+      
       <Footer />
     </div>
   );
