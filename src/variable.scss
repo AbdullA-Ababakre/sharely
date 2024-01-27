@@ -42,3 +42,8 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin removeLinkStyle {
+  color: inherit;
+  text-decoration: none;
+}

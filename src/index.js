@@ -7,6 +7,11 @@ import Details from "./pages/Details";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./slice/store";
+import CommunityRules from "./pages/CommunityRules";
+import Support from "./pages/Support";
+import CreatorTerms from "./pages/CreatorTerms";
+import BrandTerms from "./pages/BrandTerms";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +21,26 @@ const router = createBrowserRouter([
   {
     path: "detail",
     element: <Details />,
+  },
+  {
+    path: "community-rules",
+    element: <CommunityRules />,
+  },
+  {
+    path: "support",
+    element: <Support />,
+  },
+  {
+    path: "creator-terms",
+    element: <CreatorTerms />,
+  },
+  {
+    path: "brand-terms",
+    element: <BrandTerms />,
+  },
+  {
+    path: "privacy-policy",
+    element: <PrivacyPolicy />,
   },
   {
     path: "*",

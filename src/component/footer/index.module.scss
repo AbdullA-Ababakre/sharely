@@ -20,9 +20,18 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     column-gap: 20px;
-    h4 {
+
+    .footerLink {
+      @include removeLinkStyle;
       align-self: center;
-      cursor: pointer;
+    }
+
+    @include media(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(large) {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 
