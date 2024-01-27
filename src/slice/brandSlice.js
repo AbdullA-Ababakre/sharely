@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import lightspaceImg from "../assets/lightspace.png";
-import musicfyImg from "../assets/musicfy.png";
+import musicfyImg from "../assets/testPilotPro.png";
 import Sourcely from "../assets/sourcely.png";
 import DreamMore from "../assets/dreammore.png";
 
@@ -93,13 +93,11 @@ const brands = {
       "Sample video: https://www.tiktok.com/@infotap_official/video/7323081037393726762",
     ],
     imageSrc: "https://s11.ax1x.com/2024/01/19/pFAR3lj.jpg",
-    bounty: [
-      "$20 per 1000 views, capped at $2000 per 1M views.",
-    ],
+    bounty: ["$20 per 1000 views, capped at $2000 per 1M views."],
   },
 };
 
-const activeBrands = [0, 1, 2, 3,4];
+const activeBrands = [0, 1, 2, 3, 4];
 export const brandSliceKey = "brand";
 export const brandSlice = createSlice({
   name: brandSliceKey,

@@ -9,11 +9,11 @@
 .page {
   .container {
     background-color: $color-primary-blue;
-
+    height: 90vh;
     .title {
       padding-top: 10px;
       padding-left: 40px;
-      font-size: 2.5em; // changed to em for scalability
+      font-size: 2.5em;
       color: white;
 
       @include media-mobile {

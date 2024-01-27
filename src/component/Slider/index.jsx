@@ -56,7 +56,7 @@ const BonusItem = ({ name, bonus, onToggle, isChecked }) => (
 );
 
 function BonusList() {
-  const [selectedBonuses, setSelectedBonuses] = useState([]);
+  const [_, setSelectedBonuses] = useState([]);
 
   const handleToggle = (id) => {
     setSelectedBonuses((current) => {

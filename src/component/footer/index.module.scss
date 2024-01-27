@@ -1,11 +1,66 @@
 .footer {
-    background-color: rgb(18, 23, 40);
-    padding: 20px;
-    text-align: center;
-    
-    .footer__text {
-      color: rgb(251, 251, 252);
-      font-size: 14px;
-      margin: 0;
+  position: relative;
+  min-height: 30vh;
+  color: white;
+  background-color: rgb(18, 23, 40);
+
+  &__text {
+    color: rgb(251, 251, 252);
+    font-size: 14px;
+  }
+
+  &Content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 80vw;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    column-gap: 20px;
+    h4 {
+      align-self: center;
+      cursor: pointer;
     }
   }
+
+  &Line {
+    height: 1px;
+    margin: 1rem 0;
+  }
+
+  &Signature {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+// // Define your grid layout
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr); // 4 columns
+//   gap: 20px; // Adjust the gap as needed
+// }
+
+// // Apply the grid layout to the items inside the footer
+// .styles.footer {
+//   @include grid-container;
+
+//   // Additional styling for the h2 elements if needed
+//   h2 {
+//     // Add any styles for the h2 elements
+//   }
+// }
+
+// // Media query for responsive behavior on smaller screens
+// @media screen and (max-width: 768px) {
+//   .styles.footer {
+//     grid-template-columns: repeat(2, 1fr); // 2 columns on smaller screens
+
+//     // Additional styling for smaller screens if needed
+//     h2 {
+//       // Add any styles for the h2 elements on smaller screens
+//     }
+//   }
+// }

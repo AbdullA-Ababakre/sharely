@@ -36,8 +36,17 @@ function Creators() {
           </div>
         </div>
       </div>
-      <Gallery />
-      
+      <div
+        style={{
+          height: "90vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Gallery />
+      </div>
+
       <Footer />
     </div>
   );
