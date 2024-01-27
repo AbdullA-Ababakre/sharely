@@ -1,3 +1,5 @@
+@import "../../variable.scss";
+
 .footer {
   position: relative;
   min-height: 30vh;
@@ -15,7 +17,7 @@
     width: 80vw;
     min-height: 20vh;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     column-gap: 20px;
     h4 {
@@ -35,32 +37,3 @@
     padding-bottom: 2rem;
   }
 }
-
-// // Define your grid layout
-// .grid-container {
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr); // 4 columns
-//   gap: 20px; // Adjust the gap as needed
-// }
-
-// // Apply the grid layout to the items inside the footer
-// .styles.footer {
-//   @include grid-container;
-
-//   // Additional styling for the h2 elements if needed
-//   h2 {
-//     // Add any styles for the h2 elements
-//   }
-// }
-
-// // Media query for responsive behavior on smaller screens
-// @media screen and (max-width: 768px) {
-//   .styles.footer {
-//     grid-template-columns: repeat(2, 1fr); // 2 columns on smaller screens
-
-//     // Additional styling for smaller screens if needed
-//     h2 {
-//       // Add any styles for the h2 elements on smaller screens
-//     }
-//   }
-// }

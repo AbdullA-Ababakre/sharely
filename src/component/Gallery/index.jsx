@@ -15,7 +15,6 @@ function Gallery() {
   };
 
   const brands = useSelector(selectActiveBrands);
-  console.log(brands);
   return (
     <div className={styles.gallery}>
       <div className={styles.title}>Share and Earn</div>
