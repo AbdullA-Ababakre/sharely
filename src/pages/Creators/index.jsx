@@ -4,7 +4,6 @@ import TiktokColeection from "../../assets/tiktok.png";
 import Footer from "../../component/footer/index";
 import Gallery from "../../component/Gallery/index";
 import Button from "../../component/Button/index";
-import { Slider } from "../../component/Slider";
 
 function Creators() {
   const toCreatorsForm = () => {
@@ -38,7 +37,7 @@ function Creators() {
       </div>
       <div
         style={{
-          height: "90vh",
+          minHeight: "90vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

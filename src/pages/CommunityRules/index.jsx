@@ -151,7 +151,7 @@ function CommunityRules() {
           <p>
             If you have any uncertainties about the acceptance of your content
             by Sharely, feel free to contact the Sharely Support team at
-            support@sharely.co for assistance, guidance, or feedback.
+            support@sharely.fun for assistance, guidance, or feedback.
           </p>
         </div>
       </div>
