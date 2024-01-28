@@ -45,7 +45,6 @@ function Creators() {
       >
         <Gallery />
       </div>
-
       <Footer />
     </div>
   );

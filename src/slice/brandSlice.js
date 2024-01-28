@@ -75,7 +75,7 @@ const brands = {
     ],
   },
   4: {
-    id: 3,
+    id: 4,
     title: "InfoTap",
     productLink: "https://www.tiktok.com/@infotap_official",
     desc: "The most fastest and easiest way to connect and make friends",

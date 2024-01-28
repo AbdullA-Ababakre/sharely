@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 import { Link } from "react-router-dom";
+import SupportLink from "../SupportLink";
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
         <Link className={styles.footerLink} to="/community-rules">
           Community Rules
         </Link>
-        <Link className={styles.footerLink} to="/support">
-          Support
-        </Link>
+        <SupportLink />
         <Link className={styles.footerLink} to="/creator-terms">
           Creator Terms
         </Link>
