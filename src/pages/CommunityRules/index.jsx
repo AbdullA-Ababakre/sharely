@@ -1,11 +1,12 @@
 import React from "react";
 import "./index.scss";
 import Footer from "../../component/footer";
+import TermsBox from "../../component/TermsBox";
 
 function CommunityRules() {
   return (
     <div className="">
-      <div className="communityRules">
+      <TermsBox>
         <h2>Sharely Community Guidelines</h2>
         <div className="communityRules__group">
           <span>Sept 01, 2023</span>
@@ -154,7 +155,8 @@ function CommunityRules() {
             support@sharely.fun for assistance, guidance, or feedback.
           </p>
         </div>
-      </div>
+      </TermsBox>
+
       <Footer />
     </div>
   );
