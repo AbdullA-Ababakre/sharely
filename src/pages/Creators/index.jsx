@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./index.module.scss";
-import TiktokColeection from "../../assets/tiktok.png";
+// import TiktokColeection from "../../assets/tiktok.png";
 import Footer from "../../component/footer/index";
 import Gallery from "../../component/Gallery/index";
 import Button from "../../component/Button/index";
+import { Slider } from "../../component/Slider";
+import myVideo from "../../assets/video.MOV";
 
 function Creators() {
   const toCreatorsForm = () => {
@@ -30,9 +32,13 @@ function Creators() {
               <Button onClick={toCreatorsForm} text="Get Started"></Button>
             </div>
           </div>
-          <div className={styles.imageWrap}>
+          {/* <div className={styles.imageWrap}>
             <img className={styles.image} src={TiktokColeection} alt="tiktok" />
-          </div>
+          </div> */}
+          <video className={styles.imageWrap}  autoPlay muted loop>
+            <source src={myVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
       <div
