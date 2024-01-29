@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
 import TermBox from "../../component/TermsBox";
+import Footer from "../../component/footer";
 function CreatorTerms() {
   return (
     <div>
@@ -141,14 +142,14 @@ function CreatorTerms() {
               ensuring that their content adheres to age restrictions and all
               relevant laws concerning age-restricted products. Violation may
               lead to content removal, suspension, or account termination at
-              Bounty's discretion.
+              Sharely's discretion.
             </p>
 
             <p>
               <strong>Reporting:</strong> Users are encouraged to report
               suspected violations by contacting Sharely support at{" "}
               <a href="mailto:support@sharely.fun">support@sharely.fun</a>.
-              Bounty will investigate reports and take appropriate action.
+              Sharely will investigate reports and take appropriate action.
             </p>
 
             <p>
@@ -488,7 +489,7 @@ function CreatorTerms() {
         <p>
           Sharely reserves the right to terminate or suspend your use of the
           Services or your account for any reason, including a breach of these
-          Terms. Bounty has sole discretion in deciding whether you violate any
+          Terms. Sharely has sole discretion in deciding whether you violate any
           restrictions in these Terms.
         </p>
         <p>
@@ -577,6 +578,7 @@ function CreatorTerms() {
           </li>
         </ul>
       </TermBox>
+      <Footer />
     </div>
   );
 }
