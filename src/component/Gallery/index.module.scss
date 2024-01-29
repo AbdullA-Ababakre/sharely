@@ -7,8 +7,12 @@
     padding-top: 10px;
   }
   .list {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1400px;
     .storeInfo {
       .storeImg {
         width: 224px;
@@ -16,18 +20,11 @@
         object-fit: fill;
       }
     }
-
-    @include media-medium2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
+    @include media(medium) {
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    @include media-small {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    @include media(xlarge) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

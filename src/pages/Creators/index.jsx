@@ -41,16 +41,7 @@ function Creators() {
           </video>
         </div>
       </div>
-      <div
-        style={{
-          minHeight: "90vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Gallery />
-      </div>
+      <Gallery />
       <Footer />
     </div>
   );
