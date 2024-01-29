@@ -21,6 +21,9 @@ const Footer = () => {
         <Link className={styles.footerLink} to="/privacy-policy">
           Privacy Policy
         </Link>
+        <Link className={styles.footerLink} to="/">
+          Home
+        </Link>
       </div>
       <hr className={styles.footerLine} />
       <div className={styles.footerSignature}>
