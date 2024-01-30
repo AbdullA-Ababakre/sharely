@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "./index.module.scss";
-// import TiktokColeection from "../../assets/tiktok.png";
 import Footer from "../../component/footer/index";
 import Gallery from "../../component/Gallery/index";
 import Button from "../../component/Button/index";
-import { Slider } from "../../component/Slider";
 import myVideo from "../../assets/video.MOV";
 
 function Creators() {
@@ -17,25 +15,21 @@ function Creators() {
       <div className={styles.container}>
         <div className={styles.title}>Sharely</div>
         <div className={styles.content}>
-          <div className={styles.text}>
-            <div className={styles.sum}>
+          <div className={styles.textContent}>
+            <p className={styles.textContentTitle}>
               Get paid by creating content about your favorite product
-            </div>
-            <div className={styles.detail}>
-              <ol type="I">
-                <li>Create content featuring your favorite product</li>
-                <li>Post the content following our guidelines</li>
-                <li>Get paid for views within the first 48 hrs</li>
-              </ol>
-            </div>
+            </p>
+            <ol className={styles.textContentDetail} type="I">
+              <li>Create content featuring your favorite product</li>
+              <li>Post the content following our guidelines</li>
+              <li>Get paid for views within the first 48 hrs</li>
+            </ol>
             <div className={styles.startBtn}>
               <Button onClick={toCreatorsForm} text="Get Started"></Button>
             </div>
           </div>
-          {/* <div className={styles.imageWrap}>
-            <img className={styles.image} src={TiktokColeection} alt="tiktok" />
-          </div> */}
-          <video className={styles.imageWrap}  autoPlay muted loop>
+
+          <video className={styles.videoContent} autoPlay muted loop>
             <source src={myVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

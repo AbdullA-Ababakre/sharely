@@ -8,75 +8,59 @@
 
 .page {
   .container {
-    display: block;
     background-color: $color-primary-blue;
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
     .title {
       padding-top: 10px;
-      padding-left: 40px;
-      font-size: 2.5em;
+      padding-left: 10px;
+      font-size: 2rem;
       color: white;
-
-      @include media-mobile {
-        padding-left: 20px;
-        font-size: 1.5em;
-      }
     }
 
     .content {
+      flex: 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       background-color: rgb(83, 93, 235);
-
-      .text {
-        width: 50%;
-        padding: 100px;
-
-        .sum {
-          font-size: 38px;
-          color: #fbfcfc;
+      height: inherit;
+      .textContent {
+        margin-top: 1rem;
+        color: white;
+        padding: 10px;
+        .textContentTitle {
+          font-size: 1.6rem;
           font-family: Mona Sans, -apple-system, system-ui, BlinkMacSystemFont,
             "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-          line-height: 48px;
-          font-weight: 400px;
-          margin-bottom: 20px;
         }
-
-        .detail {
-          font-size: 24px;
-          color: rgb(251, 252, 252);
-          font-family: Figtree, -apple-system, system-ui, BlinkMacSystemFont,
-            "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-          line-height: 36px;
+        .textContentDetail {
+          font-size: 1rem;
+          padding: 15px;
+          line-height: 2rem;
         }
-
-        @include media-mobile {
-          width: auto;
-          padding: 30px;
-
-          .sum {
-            font-size: 2em;
-          }
-          .detail {
-            font-size: 1em;
-          }
+        .startBtn {
+          margin-top: 1rem;
+          width: 100%;
         }
       }
 
-      .imageWrap {
+      .videoContent {
         height: 400px;
-
         .image {
           height: 100%;
         }
-
-        @include media-mobile {
-          padding-bottom: 50px;
-        }
       }
 
-      @include media-mobile {
-        flex-direction: column;
+      @include media(large) {
+        flex-direction: row;
+        .textContent {
+          .startBtn {
+            width: 10rem;
+          }
+        }
       }
     }
   }
@@ -102,8 +86,4 @@
       }
     }
   }
-}
-
-.startBtn {
-  width: 10rem;
 }
