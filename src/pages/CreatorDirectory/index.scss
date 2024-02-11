@@ -1,0 +1,43 @@
+@import "../../variable.scss";
+
+.creatorDirectoryPage {
+  max-width: $max-width01;
+  margin: 0 auto;
+  &Header {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &Title {
+      text-align: center;
+    }
+  }
+  &Container {
+    max-width: $max-width01;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 90vh;
+  }
+
+  @include media(medium) {
+    &Container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @include media(large) {
+    &Container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @include media(xlarge) {
+    &Container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

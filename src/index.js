@@ -11,6 +11,7 @@ import CommunityRules from "./pages/CommunityRules";
 import CreatorTerms from "./pages/CreatorTerms";
 import BrandTerms from "./pages/BrandTerms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CreatorDirectory from "./pages/CreatorDirectory";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "privacy-policy",
     element: <PrivacyPolicy />,
+  },
+  {
+    path: "creator-directory",
+    element: <CreatorDirectory />,
   },
   {
     path: "*",
